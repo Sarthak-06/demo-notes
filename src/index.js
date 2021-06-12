@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './components/HeroSection/style.css'
 
 import App from './App';
 
