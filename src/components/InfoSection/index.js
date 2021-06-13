@@ -14,6 +14,7 @@ import {
   ImgWrap,
   Img,
 } from "./InfoElements";
+// import Svg from "react-native-svg";
 
 const InfoSection = ({
   lightBg,
@@ -27,6 +28,9 @@ const InfoSection = ({
   buttonLabel,
   img,
   alt,
+  primay,
+  dark,
+  dark2,
 }) => {
   return (
     <>
@@ -39,13 +43,25 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button to="home">{buttonLabel}</Button>
+                  <Button
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primay={primay ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src="https://images.pexels.com/photos/207732/pexels-photo-207732.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt={alt} />
+                <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
