@@ -1,40 +1,47 @@
-import React from 'react';
-import {FaBars} from 'react-icons/fa';
-import {Nav,NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks,NavBtn,NavBtnLink} from "./NavbarElement";
+import React from "react";
+import { FaBars } from "react-icons/fa";
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLinks,
+  NavBtn,
+  NavBtnLink,
+} from "./NavbarElement";
 
-const Navbar = ({toggle}) => {
-    return (
-        <>
-        <Nav>
-            <NavbarContainer>
-                <NavLogo to="home">NoTaTo</NavLogo>
-                   <MobileIcon onClick={toggle}>
-                       <FaBars/>
-                   </MobileIcon>
-                   <NavMenu>
-                       <NavItem>
-                           <NavLinks to ='about'>About</NavLinks>
-                       </NavItem>
-                       <NavItem>
-                           <NavLinks to ='discover'>Discover</NavLinks>
-                       </NavItem>
-                       <NavItem>
-                           <NavLinks to ='services'>ToDo</NavLinks>
-                       </NavItem>
-                       <NavItem>
-                           <NavLinks to ='signup'>Sign-Up</NavLinks>
-                       </NavItem>
-                       <NavBtn>
-                         
-                           <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                          
-                       </NavBtn>
-                   </NavMenu>
-                
-             </NavbarContainer>
-        </Nav>
-        </>
-    )
-}
+const Navbar = ({ toggle }) => {
+  return (
+    <>
+      <Nav>
+        <NavbarContainer onClick={toggle}>
+          <NavLogo to="about">NoTaTo</NavLogo>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="about">About</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="discover">Discover</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="services">ToDo</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="signup">Sign-Up</NavLinks>
+            </NavItem>
+            <NavBtn>
+              <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            </NavBtn>
+          </NavMenu>
+        </NavbarContainer>
+      </Nav>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
