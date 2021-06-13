@@ -15,7 +15,7 @@ import {
   Img,
 } from "./InfoElements";
 
-const InfoSection = ({
+const InfoSectioncopy = ({
   lightBg,
   id,
   imgStart,
@@ -45,7 +45,7 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src="https://images.pexels.com/photos/207732/pexels-photo-207732.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt={alt} />
+                <Img src="https://pbs.twimg.com/media/Exus5lLVEAEjbdh.jpg" alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
@@ -55,4 +55,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default InfoSectioncopy;
