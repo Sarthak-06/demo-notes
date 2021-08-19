@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Video from "../../videos/video.mp4";
 import "./style.css";
+
 import {
   HeroContainer,
   HeroBg,
@@ -36,6 +37,7 @@ const HeroSection = () => {
             onMouseLeave={onHover}
             primary="true"
             dark="true"
+            className="btn"
           >
             Get Started
           </Link>
