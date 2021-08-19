@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Video from "../../videos/video.mp4";
-import { Button } from "../ButtonElement";
+import "./style.css";
 import {
   HeroContainer,
   HeroBg,
@@ -18,7 +19,7 @@ const HeroSection = () => {
     setHover(!hover);
   };
   return (
-    <HeroContainer id='home'>
+    <HeroContainer id="home">
       <HeroBg>
         <video className="videoTag" autoPlay loop muted>
           <source src={Video} type="video/mp4" />
@@ -29,15 +30,15 @@ const HeroSection = () => {
         <HeroH1>Virtual Study Made Easy</HeroH1>
         <HeroP>Sign Up today access all notes and assignment for free</HeroP>
         <HeroBtnWrapper>
-          <Button
-            to="signup"
+          <Link
+            to="/notes/notes"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
             dark="true"
           >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+            Get Started
+          </Link>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
